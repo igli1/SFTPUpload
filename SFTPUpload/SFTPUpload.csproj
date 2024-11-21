@@ -6,4 +6,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="nsoftware.IPWorksSFTP" Version="24.0.9048" />
+    </ItemGroup>
+
 </Project>

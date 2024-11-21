@@ -1,6 +1,11 @@
+using SFTPUpload.Configuration;
+using SFTPUpload.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.Configure<SFTPServiceConfiguration>(builder.Configuration.GetSection(SFTPServiceConfiguration.Name));
+builder.Services.AddTransient<SFTPService>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
