@@ -20,7 +20,7 @@ public class SFTPService
                 SSHUser = _configuration.SSHUser,
                 SSHPassword = _configuration.SSHPassword,
             };
-            _sftp.Config("SSHAcceptAnyServerHostKey=true");
+            _sftp.Config($"SSHAcceptAnyServerHostKey={_configuration.SSHAcceptServerHostKey}");
         }
 
         public ServiceResponse UploadFile(IFormFile file, string remoteFile)
